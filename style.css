@@ -1,0 +1,271 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header dan Hero Section */
+  header {
+    background: linear-gradient(135deg, #5e005e, #ff66cc); /* Ungu gelap & pink cerah */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3.2em;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    background: #4a148c; /* Ungu lembut */
+    color: #fff;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #6a1b9a;
+  }
+  
+  /* Navigasi */
+  nav {
+    background: #4a148c; /* Dominan ungu */
+  }
+  
+  nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 12px 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 14px;
+    transition: background 0.3s ease;
+  }
+  
+  nav ul li a:hover, nav ul li a.active {
+    background: #5e005e;
+    border-radius: 5px;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Intro Section (tanpa gambar utama) */
+  #intro {
+    background: #fff;
+    margin: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 2px solid #ff66cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  /* Hex Gallery Section (3 gambar segi enam) */
+  #hex-gallery {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .hex-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .hex-card {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    clip-path: polygon(
+      50% 0%,
+      90% 25%,
+      90% 75%,
+      50% 100%,
+      10% 75%,
+      10% 25%
+    );
+    border: 3px solid #ff66cc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .hex-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .hex-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Features Section (Feature Cards) */
+  #features {
+    background: #fff;
+    margin: 20px;
+    padding: 40px 20px;
+  }
+  
+  .feature-card {
+    background: #f9f9f9;
+    border: 2px solid #5e005e;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  #features .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Styling Tabel Lomba */
+  .lomba-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .lomba-table th,
+  .lomba-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .lomba-table thead {
+    background-color: #5e005e;
+    color: #fff;
+  }
+  
+  .lomba-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .lomba-table tbody tr:hover {
+    background-color: #ffe6ff;
+  }
+  
+  .btn-table {
+    background: #800080;
+    color: #fff;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-table:hover {
+    background: #660066;
+  }
+  
+  /* Styling Form */
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    background: #5e005e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #6a1b9a;
+  }
+  
+  /* Feedback respons form */
+  #response p {
+    background: #e6ffe6;
+    border: 1px solid #66cc66;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    color: #336633;
+    font-size: 1em;
+  }
+  
+  /* Footer */
+  footer {
+    background: #5e005e;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  /* Responsif */
+  @media (max-width: 768px) {
+    nav ul li {
+      display: block;
+      margin: 5px 0;
+    }
+    
+    #features .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .hex-container {
+      flex-direction: column;
+    }
+  }
+  

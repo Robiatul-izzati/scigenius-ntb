@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Respon Pendaftaran - SciGenius NTB</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Respon Pendaftaran</h1>
+  </header>
+  
+  <nav role="navigation">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="lomba.html">Lomba</a></li>
+      <li><a href="pendaftaran.html">Pendaftaran</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+  
+  <section id="response-section" tabindex="0">
+    <div class="container">
+      <h2>Terima Kasih!</h2>
+      <div id="response-message">
+        <!-- Pesan respons akan ditampilkan di sini -->
+      </div>
+      <a href="index.html" class="btn">Kembali ke Beranda</a>
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 SciGenius NTB | All Rights Reserved</p>
+  </footer>
+  
+  <script>
+    // Fungsi untuk mengambil query parameter dari URL
+    function getQueryParam(param) {
+      let params = new URLSearchParams(window.location.search);
+      return params.get(param);
+    }
+    
+    // Ambil parameter dari URL
+    let nama = getQueryParam('nama');
+    let email = getQueryParam('email');
+    let lomba = getQueryParam('lomba');
+    let time = getQueryParam('time');
+    
+    // Tampilkan pesan respons
+    let messageDiv = document.getElementById("response-message");
+    if (messageDiv) {
+      messageDiv.innerHTML = `
+        <p>
+          Terima kasih <strong>${nama}</strong>!<br>
+          Pendaftaran untuk <strong>${lomba}</strong> telah berhasil pada <strong>${time}</strong>.<br>
+          Konfirmasi telah dikirim ke email <strong>${email}</strong>.<br>
+          <strong>Keterangan:</strong> Anda sudah mendaftar.
+        </p>
+      `;
+    }
+  </script>
+</body>
+</html>
